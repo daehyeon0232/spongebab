@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+	<title>animation</title>
+	<style>
+		*{margin: 0; padding: 0px; font-family: 'Luckiest Guy', cursive;}
+		h1{font-size: 4em;}
+		h2{font-size: 3em;}
+		#div{position: relative; height: 100vh; background-image: linear-gradient(#83edbf, #2b83ca);}
+		#cucu1{position: absolute; width: 300px; left: 100px; top: 50px; opacity: 0.8; animation: a 3.5s infinite alternate;}
+		#cucu2{position: absolute; width: 400px; right: 50px; top: 200px; opacity: 0.8; animation: a 4s infinite alternate;}
+		#cucu3{position: absolute; width: 300px; left: 400px; top: 300px; opacity: 0.8; animation: a 3.5s infinite alternate;}
+		#cucu4{position: absolute; width: 200px; left: 40px; bottom: 50px; opacity: 0.8; animation: a 3s infinite alternate;}
+		#cucu5{position: absolute; width: 200px; right: 400px; top: 50px; opacity: 0.8; animation: a 3s infinite alternate;}
+		#cucu6{position: absolute; width: 200px; right: 250px; bottom: 30px; opacity: 0.8; animation: a 2s infinite alternate;}
+		#bub1{position: absolute; left: 20px; width: 70px; opacity: 0.8; animation: b 6.4s infinite }
+		#bub2{position: absolute; left: 100px; width: 40px; opacity: 0.8; animation: b 7s infinite }
+		#bub3{position: absolute; left: 300px; width: 90px; opacity: 0.8; animation: b 6.5s infinite }
+		#bub4{position: absolute; left: 400px;width: 50px; opacity: 0.8; animation: b 3.2s infinite }
+		#bub5{position: absolute; left: 500px;width: 120px; opacity: 0.8; animation: b 8s infinite }
+		#bub6{position: absolute; right: 600px;width: 60px; opacity: 0.8; animation: b 6s infinite }
+		#bub7{position: absolute; right: 300px;width: 20px; opacity: 0.8; animation: b 7s infinite }
+		#bub8{position: absolute; right: 20px;width: 120px; opacity: 0.8; animation: b 5s infinite }
+		#bub9{position: absolute; right: 150px;width: 50px; opacity: 0.8; animation: b 3.0s infinite}
+		@keyframes a{
+			from{transform: scale(0.9, 0.9);}
+			to{transform: scale(1.1, 1.1);}
+		}
+		@keyframes b{
+			from{opacity: 0.8; bottom: 0px;}
+			to{opacity: 0.0; bottom: 600px;}
+		}
+		#cot{position: absolute; width: 150px; top: 10px; left: 80px; animation: m 0.5s infinite alternate}
+
+		@keyframes m{
+			from{top:20px;}
+			to{top:40px;}
+		}
+
+		#love{position: relative; width: 100px; top: 150px; left: 100px; color: #EF1B1B;}
+		#burger{position: relative; width: 100px; top: 150px; left: 100px; color: #D68A25;}
+		#love2{position: relative; width: 100px; top: 150px; left: 100px; color: #64E28E;}
+		#ging{position: relative; width: 100px; top: 150px; left: 100px; color: #CDD9E8;}
+		#clock{position: relative; width: 100px; top: 150px; left: 100px; color: #444444;}
+		#ttung{position: relative; width: 100px; top: 150px; left: 100px; color: #ED2F65;}
+
+		#vbox{position: absolute; left: 50%; top: 150px; transform: translateX(-50%); width: 0px; height: 100px; transition: all 1s; background: #EF1B1B;}
+		#vsource{position: absolute; left: 50%; top: 50px; transform: translateX(-50%); width: 0px; transition: all 1s; }
+
+
+	</style>
+</head>
+
+<body>
+	<div id="div">
+		<img src="./img/blue.png" id="cucu1">
+		<img src="./img/puple.png" id="cucu2">
+		<img src="./img/white.png" id="cucu3">
+		<img src="./img/puple.png" id="cucu4">
+		<img src="./img/yellow.png" id="cucu5">
+		<img src="./img/yellow.png" id="cucu6">
+		<img src="./img/bubble.png" id="bub1"> 
+		<img src="./img/bubble.png" id="bub2"> 
+		<img src="./img/bubble.png" id="bub3"> 
+		<img src="./img/bubble.png" id="bub4"> 
+		<img src="./img/bubble.png" id="bub5">
+		<img src="./img/bubble.png" id="bub6">
+		<img src="./img/bubble.png" id="bub7">
+		<img src="./img/bubble.png" id="bub8">
+		<img src="./img/bubble.png" id="bub9">
+
+		<div id="love">
+			<h1>love</h1>
+		</div>
+		<div id="burger">
+			<h1>Burger</h1>
+		</div>
+		<div id="love2">
+			<h1>Name</h1>
+		</div>
+		<div id="ging">
+			<h2>GingGing</h2>
+		</div>
+		<div id="clock">
+			<h2>three o'clock</h2>
+		</div>
+		<div id="ttung">
+			<h1>ttung</h1>
+		</div>
+		<img src="./img/mustache.png" id="cot">
+
+		<div id="vbox">
+			<video id="vsource" src="./video/love.mp4" type="video/mp4">
+  			</video>
+  		</div>
+
+		<script>
+			love.onclick = function(){
+				vbox.style.background = "#EF1B1B";
+				vbox.style.width = "600px";
+				vbox.style.height = "380px";
+				vsource.style.width = "500px";
+				vsource.setAttribute("src","./video/love.mp4");
+				vsource.play();
+			}
+			burger.onclick = function(){
+				vbox.style.background = "#D68A25";
+				vbox.style.width = "600px";
+				vbox.style.height = "380px";
+				vsource.style.width = "500px";
+				vsource.setAttribute("src","./video/burger.mp4");
+				vsource.play();
+			}
+			love2.onclick = function(){
+				vbox.style.background = "#64E28E";
+				vbox.style.width = "600px";
+				vbox.style.height = "380px";
+				vsource.style.width = "500px";
+				vsource.setAttribute("src","./video/name.mp4");
+				vsource.play();
+			}
+			ging.onclick = function(){
+				vbox.style.background = "#CDD9E8";
+				vbox.style.width = "600px";
+				vbox.style.height = "380px";
+				vsource.style.width = "500px";
+				vsource.setAttribute("src","./video/ging.mp4");
+				vsource.play();
+			}
+			clock.onclick = function(){
+				vbox.style.background = "#444444";
+				vbox.style.width = "600px";
+				vbox.style.height = "380px";
+				vsource.style.width = "500px";
+				vsource.setAttribute("src","./video/3hour.mp4");
+				vsource.play();
+			}
+			ttung.onclick = function(){
+				vbox.style.background = "#ED2F65";
+				vbox.style.width = "600px";
+				vbox.style.height = "380px";
+				vsource.style.width = "500px";
+				vsource.setAttribute("src","./video/ttung.mp4");
+				vsource.play();
+			}
+
+			cot.onclick = function(){
+				vbox.style.background = "black";
+				vbox.style.width = "600px";
+				vbox.style.height = "380px";
+				vsource.style.width = "500px";
+				vsource.setAttribute("src","./video/mustache.mp4");
+				vsource.play();
+			}
+		</script>
+	</div>
+
+</body>
+</html>
